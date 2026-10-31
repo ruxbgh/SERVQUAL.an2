@@ -528,3 +528,6 @@ details.fallback summary { cursor: pointer; font-weight: 700; color: var(--sign)
 .scale input:checked + span, .rating input:checked + span { background: var(--grad); border-color: transparent; }
 
 .cover h1 { font-size: clamp(1.9rem, 3.6vw, 2.5rem); line-height: 1.06; }
+
+.idcard .idbody { grid-template-columns: minmax(0, 1fr) auto; }
+@media (max-width: 880px) { .idcard .idbody { grid-template-columns: 1fr; } }

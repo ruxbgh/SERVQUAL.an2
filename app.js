@@ -186,7 +186,7 @@
     var g = S.student.grupa, I = C.instrument;
     return '<div class="kicker">Rolul tău în evaluare</div>' +
       '<div class="idcard" role="group" aria-label="Legitimația de student"><div class="idtop">Legitimație de student<span>anul universitar în curs</span></div>' +
-      '<div class="idbody"><div class="avatar" aria-hidden="true">TU</div><div><h1>Student, anul II</h1>' +
+      '<div class="idbody"><div><h1>Student, anul II</h1>' +
       '<div class="facts"><span>Grupa <b>' + esc(g) + '</b></span><span>Beneficiar al serviciilor ASE</span></div></div>' +
       '<div class="barcode" aria-hidden="true"></div></div></div>' +
       '<div class="card signed"><h2>Evaluator din perspectiva beneficiarului</h2><p class="situatie">' + esc(profile().intro) + '</p>' +
@@ -370,7 +370,6 @@
       case 'imp':
         var sum = 0; K.ids.forEach(function (k) { sum += S.imp[k]; });
         need(sum === 100, 'Suma punctelor trebuie să fie exact 100 (acum: ' + sum + ').');
-        need(S.impTouched, 'Confirmă distribuția mutând cel puțin un cursor (poți reveni apoi la valoarea dorită).');
         break;
       case 'mom':
         var m = profile().momente[sc.idx];
