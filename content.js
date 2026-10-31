@@ -80,45 +80,45 @@ window.CALITAS = {
 
   /* Prezentarea instrumentului (ecranul al doilea) */
   instrument: {
-    intro: "SERVQUAL este unul dintre cele mai folosite instrumente pentru măsurarea calității serviciilor. A fost propus de Parasuraman, Zeithaml și Berry și pornește de la o idee simplă: calitatea unui serviciu nu e ce crede organizația despre ea, ci distanța dintre ce așteaptă clientul și ce primește.",
+    intro: "SERVQUAL, dezvoltat de Parasuraman, Zeithaml și Berry (1988), este unul dintre cele mai utilizate instrumente de evaluare a calității serviciilor. Modelul pornește de la premisa că un serviciu este perceput ca fiind de calitate atunci când experiența efectivă a beneficiarului atinge sau depășește nivelul așteptărilor sale.",
     formula: "Calitatea percepută = Percepții − Așteptări",
     pasi: [
-      "Notezi ce aștepți de la o universitate excelentă, pe 22 de enunțuri.",
-      "Treci prin momentele unui an la ASE și notezi cum le-ai trăit.",
-      "Evaluezi ASE pe aceleași 22 de enunțuri, din experiența ta.",
-      "Aplicația calculează diferența pe fiecare dimensiune și indicele IPCS."
+      "Precizezi așteptările față de o universitate excelentă, pe 22 de enunțuri.",
+      "Evaluezi principalele momente ale anului universitar, pe baza experienței tale.",
+      "Evaluezi serviciile ASE pe aceleași 22 de enunțuri.",
+      "Aplicația calculează decalajul pe fiecare dimensiune și indicele IPCS."
     ],
-    rol: "În acest exercițiu nu joci un rol: ești chiar beneficiarul serviciilor ASE. Răspunsurile tale sunt anonime, iar profesorul vede doar rezultatele grupei."
+    rol: "În acest exercițiu nu este necesar să îți imaginezi o situație: evaluezi serviciile ASE din perspectiva beneficiarului direct. Răspunsurile sunt anonime și vor fi analizate doar în formă agregată."
   },
 
   /* Un singur profil: studentul însuși. Momentele anului îl ajută să-și amintească experiența reală. */
   profiles: [
     {
-      id: "ase", eticheta: "Student ASE, anul 2",
-      persona: { nume: "tu", varsta: 0, rol: "student, anul 2", initiale: "TU", loc: "ASE" },
-      intro: "Ești student în anul al doilea. Ai trecut deja printr-un an întreg la ASE: înscrieri, orare, cursuri, seminare, secretariat, platforme, sesiuni. Știi din experiență ce merge bine și ce nu. Acum ești, la propriu, clientul pe care îl măsurăm.",
+      id: "ase", eticheta: "Student ASE, anul II",
+      persona: { nume: "tu", varsta: 0, rol: "student, anul II", initiale: "TU", loc: "ASE" },
+      intro: "Ești în al doilea an de studiu și ai parcurs deja un an universitar complet: înscrieri, orare, cursuri și seminare, relația cu secretariatul, platformele online și sesiunile de examene. Această experiență directă face din tine un evaluator avizat al serviciilor oferite de universitate.",
       momente: [
         { id: "a1", ora: "Septembrie–octombrie", titlu: "Începutul anului", asteptare: 0, serviciu: 0,
-          text: "Anul începe. Afli orarul, formațiile de studiu, sălile, disciplinele și cine le predă. Poate în prima săptămână s-au schimbat lucruri, poate nu.",
-          intrebare: "Când ai aflat orarul final? Ai știut de la început unde și când ai fiecare activitate?" },
+          text: "Începutul anului universitar: afli orarul, formațiile de studiu, sălile, disciplinele și titularii acestora. În primele săptămâni pot interveni modificări.",
+          intrebare: "Când a fost disponibil orarul final? Ai avut, de la început, informații clare despre locul și ora fiecărei activități?" },
         { id: "a2", ora: "Oricând în an", titlu: "La secretariat", asteptare: 0, serviciu: 0,
-          text: "Ai nevoie de o adeverință de student, de o semnătură pe un document sau de un răspuns la o cerere.",
-          intrebare: "Cât ai așteptat? Ai primit actul corect și la termenul promis? Cum ai fost tratat?" },
+          text: "Interacțiunea cu secretariatul: solicitarea unei adeverințe de student, semnarea unui document sau soluționarea unei cereri.",
+          intrebare: "Cât a durat soluționarea? Ai primit documentul corect și la termenul anunțat? Cum ai fost tratat?" },
         { id: "a3", ora: "O săptămână obișnuită", titlu: "Cursuri și seminare", asteptare: 0, serviciu: 0,
-          text: "Mergi la cursuri și seminare, lucrezi la proiecte, pui întrebări.",
-          intrebare: "Încep activitățile la timp? Înțelegi ce se cere de la tine? Au profesorii timp pentru întrebările tale?" },
+          text: "Activitatea didactică curentă: cursuri, seminare, proiecte, comunicarea cu cadrele didactice.",
+          intrebare: "Încep activitățile la ora programată? Cerințele sunt formulate clar? Ai posibilitatea de a adresa întrebări?" },
         { id: "a4", ora: "Zi de zi", titlu: "Platforme online și comunicare", asteptare: 0, serviciu: 0,
-          text: "Folosești e-mailul instituțional, platforma de cursuri, site-ul facultății și grupurile unde apar anunțurile.",
-          intrebare: "Găsești ușor informația de care ai nevoie? Primești răspuns la e-mailuri? Afli la timp de schimbări?" },
+          text: "Comunicarea instituțională: e-mailul instituțional, platforma de cursuri, site-ul facultății și canalele prin care sunt transmise anunțurile.",
+          intrebare: "Găsești ușor informațiile necesare? Primești răspuns la mesaje? Ești informat la timp despre modificări?" },
         { id: "a5", ora: "Între ore", titlu: "Spațiile ASE", asteptare: 0, serviciu: 0,
-          text: "Săli de curs, bibliotecă, spații de studiu, rețea Wi-Fi, grupuri sanitare, locuri unde poți sta între ore.",
-          intrebare: "Ai unde să înveți între cursuri? Merge rețeaua? Sunt sălile potrivite pentru activitățile din ele?" },
+          text: "Infrastructura: săli de curs, bibliotecă, spații de studiu individual, rețeaua Wi-Fi, grupuri sanitare, spații de așteptare între activități.",
+          intrebare: "Există spații adecvate pentru studiu între activități? Funcționează rețeaua? Sălile sunt potrivite pentru activitățile desfășurate?" },
         { id: "a6", ora: "Ianuarie–februarie, iunie", titlu: "Sesiunea", asteptare: 0, serviciu: 0,
-          text: "Examene, programarea lor, publicarea notelor, vederea lucrărilor, eventual restanțe.",
-          intrebare: "Programarea a fost anunțată din timp? Au apărut notele la termen? Ai putut să-ți vezi lucrarea dacă ai vrut?" },
+          text: "Sesiunea de examene: programarea examenelor, publicarea rezultatelor, vizualizarea lucrărilor și, eventual, reexaminările.",
+          intrebare: "Programarea a fost anunțată din timp? Rezultatele au fost publicate la termen? Ai avut posibilitatea de a-ți vedea lucrarea?" },
         { id: "a7", ora: "Când ai nevoie", titlu: "Servicii pentru studenți", asteptare: 0, serviciu: 0, optional: true,
-          text: "Burse, cazare în cămin, consiliere, orientare în carieră, mobilități Erasmus.",
-          intrebare: "Dacă ai folosit vreunul dintre aceste servicii: a fost clar ce ai de făcut? Ai primit răspuns la timp?" }
+          text: "Servicii suport: burse, cazare în cămin, consiliere, orientare în carieră, mobilități Erasmus+.",
+          intrebare: "Dacă ai apelat la aceste servicii: procedura a fost clară? Ai primit un răspuns în timp util?" }
       ]
     }
   ],

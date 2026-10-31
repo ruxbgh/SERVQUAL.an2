@@ -8,12 +8,12 @@
   var timerEl = document.getElementById('timer');
 
   var MACROS = [
-    { t: 'Început', m: 2 }, { t: 'Instrumentul', m: 6 }, { t: 'Rolul tău', m: 3 }, { t: 'Așteptări', m: 11 },
-    { t: 'Anul tău la ASE', m: 11 }, { t: 'Percepții', m: 10 }, { t: 'Rezultatele tale', m: 5 },
+    { t: 'Început', m: 2 }, { t: 'Modelul SERVQUAL', m: 6 }, { t: 'Rolul tău', m: 3 }, { t: 'Așteptări', m: 11 },
+    { t: 'Anul universitar', m: 11 }, { t: 'Percepții', m: 10 }, { t: 'Rezultatele tale', m: 5 },
     { t: 'Trimitere', m: 2 }
   ];
-  var RATING_LABELS = ['Foarte rău', 'Rău', 'Neutru', 'Bine', 'Foarte bine'];
-  var DIM_COLORS = { T: '#7d93b3', F: '#24456b', R: '#e8a317', S: '#2c7a57', E: '#b8402f' };
+  var RATING_LABELS = ['Foarte slab', 'Slab', 'Acceptabil', 'Bun', 'Foarte bun'];
+  var DIM_COLORS = { T: '#6c8cf5', F: '#1f5bd8', R: '#ffb020', S: '#14946b', E: '#e2553f' };
 
   function zeros(n) { var a = []; for (var i = 0; i < n; i++) a.push(0); return a; }
   function blank() {
@@ -55,21 +55,21 @@
   }
   function universityArt() {
     var cols = '', x, win = '';
-    for (x = 112; x <= 280; x += 28) cols += '<rect x="' + x + '" y="112" width="12" height="98" fill="#ffffff"/><rect x="' + (x - 3) + '" y="106" width="18" height="7" fill="#e9eef5"/><rect x="' + (x - 3) + '" y="208" width="18" height="6" fill="#e9eef5"/>';
-    for (x = 30; x <= 62; x += 16) win += '<rect x="' + x + '" y="124" width="9" height="16" rx="4.5" fill="#9fb4d1"/><rect x="' + x + '" y="160" width="9" height="16" rx="4.5" fill="#9fb4d1"/>';
-    for (x = 331; x <= 363; x += 16) win += '<rect x="' + x + '" y="124" width="9" height="16" rx="4.5" fill="#9fb4d1"/><rect x="' + x + '" y="160" width="9" height="16" rx="4.5" fill="#9fb4d1"/>';
+    for (x = 112; x <= 280; x += 28) cols += '<rect x="' + x + '" y="112" width="12" height="98" fill="#ffffff"/><rect x="' + (x - 3) + '" y="106" width="18" height="7" fill="#eaf0fb"/><rect x="' + (x - 3) + '" y="208" width="18" height="6" fill="#eaf0fb"/>';
+    for (x = 30; x <= 62; x += 16) win += '<rect x="' + x + '" y="124" width="9" height="16" rx="4.5" fill="#9fb8ef"/><rect x="' + x + '" y="160" width="9" height="16" rx="4.5" fill="#9fb8ef"/>';
+    for (x = 331; x <= 363; x += 16) win += '<rect x="' + x + '" y="124" width="9" height="16" rx="4.5" fill="#9fb8ef"/><rect x="' + x + '" y="160" width="9" height="16" rx="4.5" fill="#9fb8ef"/>';
     return '<svg viewBox="0 0 400 270" aria-hidden="true" preserveAspectRatio="xMidYMax meet">' +
       '<rect x="20" y="104" width="360" height="126" fill="#f7f9fc"/>' + win +
-      '<rect x="96" y="104" width="208" height="112" fill="#dfe6f0"/>' +
+      '<rect x="96" y="104" width="208" height="112" fill="#dfe7fa"/>' +
       '<polygon points="88,104 200,52 312,104" fill="#f7f9fc"/><polygon points="108,98 200,60 292,98" fill="#e2e9f3"/>' +
-      '<rect x="84" y="100" width="232" height="8" fill="#24456b"/>' +
-      '<circle cx="200" cy="83" r="9" fill="#e8a317"/>' + cols +
-      '<rect x="90" y="214" width="220" height="6" fill="#e9eef5"/><rect x="80" y="220" width="240" height="6" fill="#dfe6f0"/><rect x="70" y="226" width="260" height="6" fill="#d3dce8"/>' +
-      '<rect x="0" y="232" width="400" height="38" fill="#c9d4e2"/><rect x="0" y="232" width="400" height="3" fill="#b6c4d6"/>' +
+      '<rect x="84" y="100" width="232" height="8" fill="#1f5bd8"/>' +
+      '<circle cx="200" cy="83" r="9" fill="#ffb020"/>' + cols +
+      '<rect x="90" y="214" width="220" height="6" fill="#eaf0fb"/><rect x="80" y="220" width="240" height="6" fill="#dfe7fa"/><rect x="70" y="226" width="260" height="6" fill="#d3dce8"/>' +
+      '<rect x="0" y="232" width="400" height="38" fill="#cbd6ee"/><rect x="0" y="232" width="400" height="3" fill="#b5c3e2"/>' +
       '<g><rect x="6" y="196" width="5" height="38" fill="#6f7f93"/><circle cx="8.5" cy="190" r="17" fill="#8fb39b"/></g>' +
       '<g><rect x="388" y="200" width="5" height="34" fill="#6f7f93"/><circle cx="390.5" cy="194" r="15" fill="#8fb39b"/></g>' +
-      '<g transform="translate(150 238)"><circle cx="0" cy="-12" r="5" fill="#14223a"/><rect x="-5" y="-7" width="10" height="17" rx="4" fill="#e8a317"/><rect x="2" y="-4" width="7" height="9" rx="1.5" fill="#24456b"/></g>' +
-      '<g transform="translate(246 238)"><circle cx="0" cy="-12" r="5" fill="#14223a"/><rect x="-5" y="-7" width="10" height="17" rx="4" fill="#b8402f"/></g>' +
+      '<g transform="translate(150 238)"><circle cx="0" cy="-12" r="5" fill="#121a33"/><rect x="-5" y="-7" width="10" height="17" rx="4" fill="#ffb020"/><rect x="2" y="-4" width="7" height="9" rx="1.5" fill="#1f5bd8"/></g>' +
+      '<g transform="translate(246 238)"><circle cx="0" cy="-12" r="5" fill="#121a33"/><rect x="-5" y="-7" width="10" height="17" rx="4" fill="#b8402f"/></g>' +
       '</svg>';
   }
 
@@ -151,63 +151,63 @@
   var R = {};
 
   R.start = function () {
-    var resumed = S.started ? '<div class="infobox">Ai deja o sesiune începută pe acest dispozitiv. Apasă pe buton și continui de unde ai rămas.</div>' : '';
-    return '<section class="cover"><div class="txt"><div class="kicker">Managementul calității, anul 2</div>' +
-      '<h1>Cum arată ASE prin ochii tăi?</h1>' +
-      '<p>Ești de un an și ceva student la ASE. Folosește-ți experiența ca să măsori calitatea serviciilor universității cu SERVQUAL, același instrument pe care îl folosesc spitalele, băncile sau companiile aeriene.</p>' +
+    var resumed = S.started ? '<div class="infobox">Există o sesiune începută pe acest dispozitiv. Apasă butonul de mai jos pentru a continua de unde ai rămas.</div>' : '';
+    return '<section class="cover"><div class="txt"><div class="kicker">Managementul calității, anul II</div>' +
+      '<h1>Calitatea serviciilor ASE, evaluată de studenți</h1>' +
+      '<p>Ești în al doilea an de studiu la ASE. Pe baza experienței tale, vei evalua calitatea serviciilor universității cu ajutorul modelului SERVQUAL, unul dintre cele mai utilizate instrumente de măsurare a calității serviciilor, aplicat în sănătate, servicii bancare sau transport aerian.</p>' +
       '<div class="meta"><span>aproximativ 50 de minute</span><span>individual și anonim</span><span>22 de enunțuri, 5 dimensiuni</span></div></div>' +
       '<div class="art">' + universityArt() + '<div class="ticket" aria-hidden="true">Cerere nr.<b>1247</b>Termen: 3 zile lucrătoare<span class="now">Stare: în lucru</span></div></div></section>' +
       resumed +
       '<div class="card"><h2>Cum decurge</h2><ol class="howto">' +
-      '<li>Afli pe scurt cum funcționează SERVQUAL.</li>' +
-      '<li>Spui ce aștepți de la o universitate excelentă.</li>' +
-      '<li>Îți amintești momentele unui an la ASE.</li>' +
-      '<li>Evaluezi ASE pe cele 22 de enunțuri.</li>' +
-      '<li>Îți vezi rezultatele și le trimiți.</li></ol>' +
-      '<p class="small muted" style="margin:0">Răspunsurile sunt anonime: nu îți cerem numele. Profesorul vede doar rezultatele pe grupă și pe an, și le prezintă la final întregii grupe.</p></div>' +
-      '<div class="card signed"><h2>Grupa ta</h2>' +
-      field('student.grupa', 'Grupă', { rows: 1, max: 30, hint: 'De exemplu: 1023. Ajută profesorul să compare grupele; nu te identifică.' }) +
+      '<li>Parcurgi o scurtă prezentare a modelului SERVQUAL.</li>' +
+      '<li>Precizezi așteptările față de o universitate excelentă.</li>' +
+      '<li>Evaluezi principalele momente ale anului universitar.</li>' +
+      '<li>Evaluezi serviciile ASE pe cele 22 de enunțuri.</li>' +
+      '<li>Consulți rezultatele și le transmiți profesorului.</li></ol>' +
+      '<p class="small muted" style="margin:0">Răspunsurile sunt anonime: nu se colectează numele sau alte date de identificare. Rezultatele sunt analizate agregat, iar concluziile vor fi discutate la seminar.</p></div>' +
+      '<div class="card signed"><h2>Grupa de studiu</h2>' +
+      field('student.grupa', 'Grupă', { rows: 1, max: 30, hint: 'De exemplu: 1023. Permite compararea rezultatelor între grupe și nu te identifică.' }) +
       (CFG.cerCodSesiune ? field('student.cod', 'Cod de sesiune', { rows: 1, max: 30, hint: 'Îl primești de la profesor' }) : '') + '</div>';
   };
 
   R.instr = function () {
     var I = C.instrument;
-    return '<div class="hero"><div class="kicker">Instrumentul</div><h1>SERVQUAL în cinci minute</h1>' +
+    return '<div class="hero"><div class="kicker">Cadrul de evaluare</div><h1>Modelul SERVQUAL</h1>' +
       '<p>' + esc(I.intro) + '</p><p class="motto">' + esc(I.formula) + '</p></div>' +
       '<div class="card"><h2>Cele cinci dimensiuni ale calității</h2><div class="dimgrid">' +
       C.dimensions.map(function (d) {
         return '<div class="dimcard" style="border-top-color:' + DIM_COLORS[d.id] + '"><b>' + esc(d.nume) + '</b><span class="muted small">' + d.items.length + ' enunțuri</span><p>' + esc(d.desc) + '</p></div>';
       }).join('') + '</div></div>' +
-      '<div class="card"><h2>Ce vei face</h2><ol class="charta">' + I.pasi.map(function (x) { return '<li><span>' + esc(x) + '</span></li>'; }).join('') + '</ol>' +
-      '<div class="infobox" style="margin:16px 0 0"><b>Cum citești rezultatul:</b> pe fiecare dimensiune, media percepțiilor minus media așteptărilor. Un număr negativ înseamnă că serviciul a rămas sub ce așteptai; −1 sau mai jos este o discrepanță critică.</div></div>';
+      '<div class="card"><h2>Etapele evaluării</h2><ol class="charta">' + I.pasi.map(function (x) { return '<li><span>' + esc(x) + '</span></li>'; }).join('') + '</ol>' +
+      '<div class="infobox" style="margin:16px 0 0"><b>Interpretarea rezultatelor:</b> pentru fiecare dimensiune se calculează diferența dintre media percepțiilor și media așteptărilor. O valoare negativă indică un serviciu situat sub nivelul așteptat; o valoare de −1 sau mai mică semnalează o discrepanță critică.</div></div>';
   };
 
   R.rol = function () {
     var g = S.student.grupa, I = C.instrument;
-    return '<div class="kicker">Rolul tău</div>' +
+    return '<div class="kicker">Rolul tău în evaluare</div>' +
       '<div class="idcard" role="group" aria-label="Legitimația de student"><div class="idtop">Legitimație de student<span>anul universitar în curs</span></div>' +
-      '<div class="idbody"><div class="avatar" aria-hidden="true">TU</div><div><h1>Student, anul 2</h1>' +
-      '<div class="facts"><span>Grupa <b>' + esc(g) + '</b></span><span>Facultatea ta</span><span>Beneficiar al serviciilor ASE</span></div></div>' +
+      '<div class="idbody"><div class="avatar" aria-hidden="true">TU</div><div><h1>Student, anul II</h1>' +
+      '<div class="facts"><span>Grupa <b>' + esc(g) + '</b></span><span>Beneficiar al serviciilor ASE</span></div></div>' +
       '<div class="barcode" aria-hidden="true"></div></div></div>' +
-      '<div class="card signed"><h2>De data aceasta, nu joci un rol</h2><p class="situatie">' + esc(profile().intro) + '</p>' +
+      '<div class="card signed"><h2>Evaluator din perspectiva beneficiarului</h2><p class="situatie">' + esc(profile().intro) + '</p>' +
       '<div class="infobox">' + esc(I.rol) + '</div>' +
-      '<div class="thought"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#e8a317"/><path d="M15 15a5 5 0 1 1 7 4.6c-1.4.6-2 1.4-2 2.9V24" fill="none" stroke="#14223a" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="29.5" r="2" fill="#14223a"/></svg>' +
-      '<div><b>Înainte să mergi mai departe:</b> cum ar arăta pentru tine o universitate excelentă? Nu ASE, ci universitatea ideală. În pasul următor notezi exact asta.</div></div></div>';
+      '<div class="thought"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#ffb020"/><path d="M15 15a5 5 0 1 1 7 4.6c-1.4.6-2 1.4-2 2.9V24" fill="none" stroke="#121a33" stroke-width="3" stroke-linecap="round"/><circle cx="20" cy="29.5" r="2" fill="#121a33"/></svg>' +
+      '<div><b>Înainte de a continua:</b> reflectează la modul în care ar arăta, pentru tine, o universitate excelentă. În etapa următoare vei preciza așteptările față de o astfel de universitate, nu față de ASE.</div></div></div>';
   };
 
   R.exp = function (sc) {
     var d = K.dimById[sc.dim], pe = profile().persona;
-    var first = sc.di === 0 ? '<div class="infobox">Nu există răspunsuri corecte sau greșite. Răspunzi despre <b>o universitate excelentă</b> în general, nu despre ASE.</div>' : '';
+    var first = sc.di === 0 ? '<div class="infobox">Nu există răspunsuri corecte sau greșite. Te raportezi la <b>o universitate excelentă</b>, în general, nu la ASE.</div>' : '';
     return '<div class="card signed"><div class="dimhead"><div class="kicker">Așteptări, dimensiunea ' + (sc.di + 1) + ' din 5</div>' + dimDots(sc.di) + '</div>' +
       '<h2>' + esc(d.nume) + '</h2><p class="muted" style="margin-bottom:6px">' + esc(d.desc) + '</p>' +
-      '<div class="modepill a">Ce aștepți de la o universitate excelentă</div>' + first +
+      '<div class="modepill a">Așteptări față de o universitate excelentă</div>' + first +
       '<p class="progress-line" data-prog="exp:' + sc.dim + '">' + answeredCount('exp', sc.dim) + ' din ' + d.items.length + ' enunțuri completate</p>' + scaleHint() +
       likert('exp', 'e', 'A', sc.dim) + '</div>';
   };
 
   R.imp = function () {
     var h = '<div class="card signed"><div class="kicker">Importanță</div><h2>Ce contează cel mai mult pentru tine?</h2>' +
-      '<p>Împarte 100 de puncte între cele 5 dimensiuni, după cât de importante sunt pentru tine, ca student. Suma trebuie să fie exact 100.</p>';
+      '<p>Distribuie 100 de puncte între cele cinci dimensiuni, în funcție de importanța pe care o au pentru tine ca student. Totalul trebuie să fie exact 100.</p>';
     C.dimensions.forEach(function (d) {
       h += '<div class="imp"><b>' + esc(d.nume) + '</b><span class="val" id="iv-' + d.id + '">' + S.imp[d.id] + '</span>' +
         '<input type="range" min="0" max="100" step="5" value="' + S.imp[d.id] + '" data-imp="' + d.id + '" aria-label="Importanța dimensiunii ' + esc(d.nume) + '">' +
@@ -222,16 +222,16 @@
     var journey = '<div class="journey" aria-hidden="true">' + p.momente.map(function (x, i) {
       return '<span class="' + (i < sc.idx ? 'done' : i === sc.idx ? 'cur' : '') + '">' + esc(x.titlu) + '</span>';
     }).join('') + '</div>';
-    var h = '<div class="card signed moment">' + journey + '<div class="kicker">Momentul ' + (sc.idx + 1) + ' din ' + n + ' al anului tău la ASE</div>' +
+    var h = '<div class="card signed moment">' + journey + '<div class="kicker">Momentul ' + (sc.idx + 1) + ' din ' + n + ' al anului universitar</div>' +
       '<div class="mhead"><span class="ora">' + CLOCK + esc(m.ora) + '</span><h2 style="margin:0">' + esc(m.titlu) + '</h2></div>' +
       '<p class="lead">' + esc(m.text) + '</p>' +
-      '<div class="promis"><span class="pin" aria-hidden="true">?</span><div><b>Gândește-te</b>' + esc(m.intrebare) + '</div></div>' +
-      '<div id="rate-' + m.id + '"><h3 style="margin-top:18px">Cum ai trăit acest moment, în experiența ta?</h3><div class="rating six" role="radiogroup">';
+      '<div class="promis"><span class="pin" aria-hidden="true">?</span><div><b>Întrebări de reflecție</b>' + esc(m.intrebare) + '</div></div>' +
+      '<div id="rate-' + m.id + '"><h3 style="margin-top:18px">Cum evaluezi acest moment, pe baza experienței tale?</h3><div class="rating six" role="radiogroup">';
     for (var v = 1; v <= 5; v++) {
       h += '<label><input type="radio" name="r-' + m.id + '" value="' + v + '" data-mom="' + m.id + '"' + (st.r === v ? ' checked' : '') + ' aria-label="' + RATING_LABELS[v - 1] + '"><span>' + face(v) + RATING_LABELS[v - 1] + '</span></label>';
     }
     h += '<label class="na"><input type="radio" name="r-' + m.id + '" value="9" data-mom="' + m.id + '"' + (st.r === 9 ? ' checked' : '') + ' aria-label="Nu am avut contact"><span><svg viewBox="0 0 34 34" aria-hidden="true"><circle cx="17" cy="17" r="15" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 4"/><path d="M11 17h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Nu am avut contact</span></label>';
-    h += '</div></div><label class="f" style="margin-top:18px">Ce exemplu concret îți vine în minte? <span class="h">Opțional. Nu scrie nume de persoane.</span>' +
+    h += '</div></div><label class="f" style="margin-top:18px">Un exemplu concret <span class="h">Opțional. Te rugăm să nu menționezi nume de persoane.</span>' +
       '<textarea rows="3" data-momnote="' + m.id + '" maxlength="400">' + esc(st.n) + '</textarea></label></div>';
     return h;
   };
@@ -259,25 +259,25 @@
 
   R.per = function (sc) {
     var d = K.dimById[sc.dim], p = profile(), pe = p.persona;
-    var recap = '<details style="margin:0 0 14px"><summary style="cursor:pointer;font-weight:700;color:var(--sign)">Recitește momentele anului</summary><div style="margin-top:10px">' +
+    var recap = '<details style="margin:0 0 14px"><summary style="cursor:pointer;font-weight:700;color:var(--sign)">Revezi momentele anului universitar</summary><div style="margin-top:10px">' +
       p.momente.map(function (m) { var r = (S.momente[m.id] || {}).r; return '<p><b>' + esc(m.titlu) + '.</b> ' + esc(m.intrebare) + ' <span class="muted small">(nota ta: ' + (r && r <= 5 ? r : 'nu se aplică') + ')</span></p>'; }).join('') + '</div></details>';
-    var first = sc.di === 0 ? '<div class="infobox">Scala este aceeași, dar acum răspunzi despre <b>ASE</b>, din experiența ta reală.</div>' : '';
+    var first = sc.di === 0 ? '<div class="infobox">Scala rămâne aceeași; de această dată evaluezi <b>ASE</b>, pe baza experienței tale.</div>' : '';
     return '<div class="card signed"><div class="dimhead"><div class="kicker">Percepții, dimensiunea ' + (sc.di + 1) + ' din 5</div>' + dimDots(sc.di) + '</div>' +
       '<h2>' + esc(d.nume) + '</h2><p class="muted" style="margin-bottom:6px">' + esc(d.desc) + '</p>' +
-      '<div class="modepill p">Ce ai trăit la ASE</div>' + first + recap +
+      '<div class="modepill p">Percepții privind ASE</div>' + first + recap +
       '<p class="progress-line" data-prog="per:' + sc.dim + '">' + answeredCount('per', sc.dim) + ' din ' + d.items.length + ' enunțuri completate</p>' + scaleHint() +
       likert('per', 'p', 'P', sc.dim) + '</div>';
   };
 
   R.glob = function () {
-    var g = S.global, h = '<div class="card signed"><div class="kicker">Impresie generală</div><h2>Două întrebări despre experiența ta</h2>' +
+    var g = S.global, h = '<div class="card signed"><div class="kicker">Evaluare de ansamblu</div><h2>Două întrebări generale</h2>' +
       '<fieldset class="item" id="it-sat"><legend>În ansamblu, cât de mulțumit sau mulțumită ești de experiența ta ca student la ASE?</legend><div class="scale" role="radiogroup">';
     for (var v = 1; v <= 5; v++) h += '<label><input type="radio" name="sat" value="' + v + '" data-glob="sat"' + (g.sat === v ? ' checked' : '') + ' aria-label="Mulțumire ' + v + ' din 5"><span>' + v + '</span></label>';
     h += '</div><p class="small muted" style="margin:8px 0 0">1 = foarte nemulțumit, 5 = foarte mulțumit</p></fieldset>' +
       '<fieldset class="item" id="it-nps"><legend>Cât de probabil este să recomanzi ASE unui prieten care își alege facultatea?</legend><div class="scale nps" role="radiogroup">';
     for (v = 0; v <= 10; v++) h += '<label><input type="radio" name="nps" value="' + v + '" data-glob="nps"' + (g.nps === v ? ' checked' : '') + ' aria-label="Recomandare ' + v + ' din 10"><span>' + v + '</span></label>';
     h += '</div><p class="small muted" style="margin:8px 0 0">0 = deloc probabil, 10 = foarte probabil</p></fieldset>' +
-      '<div style="margin-top:14px">' + field('global.cuvant', 'Un cuvânt sau o expresie care descrie experiența ta la ASE', { rows: 1, max: 60, hint: 'Opțional' }) + '</div></div>';
+      '<div style="margin-top:14px">' + field('global.cuvant', 'Un cuvânt sau o expresie care descrie experiența ta la ASE (opțional)', { rows: 1, max: 60, hint: 'Opțional' }) + '</div></div>';
     return h;
   };
 
@@ -314,7 +314,7 @@
       '<div class="card"><h3>Unde a rămas ASE cel mai mult sub așteptările tale</h3>' +
       (worst.length ? '<ol class="gaplist">' + worst.map(li).join('') + '</ol>' : '<p>Nu ai niciun enunț cu percepția sub așteptare.</p>') +
       (best.length ? '<h3 style="margin-top:22px">Unde ți-a răspuns la așteptări</h3><ol class="gaplist">' + best.map(li).join('') + '</ol>' : '') + '</div>' +
-      '<div class="infobox">Acestea sunt rezultatele tale. Profesorul le va aduna cu ale colegilor, fără nume, ca să vedeți împreună cum arată ASE prin ochii grupei. De aici înainte răspunsurile la chestionar nu mai pot fi modificate.</div>';
+      '<div class="infobox">Acestea sunt rezultatele tale individuale. Ele vor fi agregate, fără date de identificare, cu cele ale colegilor, iar concluziile vor fi discutate la seminar. Din acest moment, răspunsurile nu mai pot fi modificate.</div>';
   };
 
 
@@ -322,7 +322,7 @@
     var pe = profile().persona, miss = firstMissing();
     var mins = Math.round((S.dur.total || 0) / 60);
     var h = '<div class="card signed"><div class="kicker">Ultimul pas</div><h2>Trimite rezultatele profesorului</h2>' +
-      '<p>Grupa <b>' + esc(S.student.grupa) + '</b>. Timp activ: ' + mins + ' minute. Răspunsurile sunt anonime.</p>';
+      '<p>Grupa <b>' + esc(S.student.grupa) + '</b>. Timp de lucru: ' + mins + ' minute. Răspunsurile sunt anonime.</p>';
     if (miss) {
       return h + '<div class="alertbox">Mai ai de completat: <b>' + esc(miss.msg) + '</b> <button class="btn small" data-goto="' + miss.step + '" style="margin-left:8px">Mergi acolo</button></div></div>';
     }
@@ -338,7 +338,7 @@
       if (S.sent && S.sentConfirmed) {
         h += '<div class="sentok"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#def1e6"/><path d="M24 41l11 11 21-24" fill="none" stroke="#2c7a57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg><div><b>Rezultatele tale au ajuns la profesor.</b><br><span class="muted small">Trimise la ' + esc(S.sentAt || '') + '. Nu mai trebuie să faci nimic.</span></div></div>';
       } else {
-        h += '<p>Apasă butonul de mai jos: rezultatele ajung direct la profesor.</p><button class="btn go big" id="btn-send">Trimite rezultatele</button>' +
+        h += '<p>Apasă butonul de mai jos pentru a transmite rezultatele direct profesorului.</p><button class="btn go big" id="btn-send">Trimite rezultatele</button>' +
           (S.sent ? '<div class="waitbox" style="margin-top:14px">Trimiterea nu a fost confirmată. Încearcă din nou sau folosește codul de mai jos.</div>' : '');
       }
       h += '<p class="status" id="status" role="status"></p>' +
@@ -349,7 +349,7 @@
     h += '<p class="small muted" style="margin:14px 0 0">Altă variantă: <a href="#" id="btn-dl">descarcă fișierul cu rezultate</a> sau <a href="#" id="btn-print">tipărește pagina</a>.</p>' +
       (CFG.endpoint ? '' : '<p class="status" id="status" role="status"></p>') + '</div>' +
       ((CFG.endpoint && !(S.sent && S.sentConfirmed)) ? '' : '<div class="card done-card"><svg viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="36" fill="#def1e6"/><path d="M24 41l11 11 21-24" fill="none" stroke="#2c7a57" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
-      '<h2>Mulțumim!</h2><p style="margin:0 auto">După ce trimite toată grupa, profesorul vă arată concluziile SERVQUAL pentru ASE.</p></div>');
+      '<h2>Îți mulțumim pentru participare!</h2><p style="margin:0 auto">Concluziile evaluării vor fi prezentate și discutate la seminar, după ce întreaga grupă își transmite rezultatele.</p></div>');
     return h;
   };
 
@@ -398,8 +398,8 @@
     var back = S.step > minStep(L) && sc.id !== 'start';
     var lastMom = profile() ? profile().momente.length - 1 : 0;
     var labels = {
-      start: S.started ? 'Continuă' : 'Începe', instr: 'Am înțeles, mai departe', rol: 'Notează așteptările', exp: sc.di === 4 ? 'Continuă la importanță' : 'Dimensiunea următoare',
-      imp: 'Începe anul la ASE', mom: sc.idx === lastMom ? 'Evaluează ASE' : 'Momentul următor',
+      start: S.started ? 'Continuă' : 'Începe', instr: 'Continuă', rol: 'Continuă cu așteptările', exp: sc.di === 4 ? 'Continuă la importanță' : 'Dimensiunea următoare',
+      imp: 'Continuă cu anul universitar', mom: sc.idx === lastMom ? 'Evaluează ASE' : 'Momentul următor',
       fisa: 'Evaluează ASE', per: sc.di === 4 ? 'Continuă' : 'Dimensiunea următoare', glob: 'Vezi rezultatele mele',
       rez: 'Treci la trimitere'
     };
@@ -428,7 +428,7 @@
     var h = '<ol>' + MACROS.map(function (m, i) {
       return '<li class="' + (i < cur ? 'done' : i === cur ? 'cur' : '') + '"' + (i === cur ? ' aria-current="step"' : '') + '>' + esc(m.t) + '<small>' + m.m + ' min</small></li>';
     }).join('') + '</ol>';
-    if (pe) h += '<div class="who"><span class="muted">Răspunsuri anonime</span><b>Grupa ' + esc(S.student.grupa) + '</b>Student, anul 2</div>';
+    if (pe) h += '<div class="who"><span class="muted">Răspunsuri anonime</span><b>Grupa ' + esc(S.student.grupa) + '</b>Student, anul II</div>';
     if (S.started) h += '<p class="reset"><a href="#" id="btn-reset">Student nou sau reia de la zero</a></p>';
     rail.innerHTML = h;
     var pct = Math.round(S.step / Math.max(L.length - 1, 1) * 100);

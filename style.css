@@ -3,22 +3,22 @@
 /* Direcție vizuală: universitate (albastru academic, chihlimbar) și obiectele unui student:
    cerere înregistrată, legitimație, calendarul anului. */
 :root {
-  --ink: #14223a;
-  --muted: #56627a;
-  --paper: #f0f3f8;
-  --paper-2: #e3e9f2;
+  --ink: #121a33;
+  --muted: #525d78;
+  --paper: #f3f6fd;
+  --paper-2: #e6ecf9;
   --card: #ffffff;
-  --line: #d4dbe7;
-  --sign: #24456b;
-  --sign-dark: #172f4b;
-  --sign-soft: #e3eaf4;
-  --wait: #e8a317;
-  --wait-deep: #b97f0a;
-  --wait-soft: #fff3cc;
-  --alert: #b8402f;
-  --alert-soft: #fbe5e0;
-  --ok: #2c7a57;
-  --ok-soft: #def1e6;
+  --line: #d5ddef;
+  --sign: #1f5bd8;
+  --sign-dark: #1443a6;
+  --sign-soft: #e6eefe;
+  --wait: #ffb020;
+  --wait-deep: #d98a00;
+  --wait-soft: #fff3d3;
+  --alert: #d0442f;
+  --alert-soft: #fde6e1;
+  --ok: #14946b;
+  --ok-soft: #ddf4ea;
   --head: 'Barlow Semi Condensed', 'Arial Narrow', Arial, sans-serif;
   --body: 'Atkinson Hyperlegible', 'Segoe UI', Arial, sans-serif;
   --r: 12px;
@@ -89,7 +89,7 @@ code { background: var(--paper-2); padding: 1px 5px; border-radius: 4px; font-si
 .alertbox, .infobox, .waitbox { padding: 14px 18px; border-radius: 10px; margin: 0 0 16px; }
 .alertbox { background: var(--alert-soft); border: 1px solid #efc3ba; }
 .alertbox ul { margin: .4em 0 0; padding-left: 1.2em; }
-.infobox { background: var(--sign-soft); border: 1px solid #c6d4e6; }
+.infobox { background: var(--sign-soft); border: 1px solid #c4d5fb; }
 .waitbox { background: var(--wait-soft); border: 1px solid #f1d98a; }
 
 /* ---------- Formulare ---------- */
@@ -112,13 +112,13 @@ textarea { min-height: 110px; resize: vertical; }
 .cover h1 { color: #fff; font-size: clamp(2rem, 4.6vw, 3rem); line-height: 1.02; margin-bottom: .35em; }
 .cover p { opacity: .93; }
 .cover .kicker { color: var(--wait); }
-.cover .art { position: relative; background: linear-gradient(180deg, #c5d5ea 0%, #e8eef7 100%); min-height: 280px; }
+.cover .art { position: relative; background: linear-gradient(180deg, #c9dafd 0%, #eef3ff 100%); min-height: 280px; }
 .cover .art svg { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: auto; }
 .meta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .meta span { background: rgba(255,255,255,.13); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 6px 14px; font-size: .9rem; }
 
 /* Bonul de ordine */
-.ticket { position: absolute; right: 22px; top: 22px; width: 150px; background: #fff; color: var(--ink); border-radius: 6px; padding: 12px 12px 14px; text-align: center; transform: rotate(4deg); box-shadow: 0 10px 22px rgba(23,47,75,.25); font-size: .72rem; line-height: 1.25; }
+.ticket { position: absolute; right: 22px; top: 22px; width: 150px; background: #fff; color: var(--ink); border-radius: 6px; padding: 12px 12px 14px; text-align: center; transform: rotate(4deg); box-shadow: 0 10px 22px rgba(20,48,140,.25); font-size: .72rem; line-height: 1.25; }
 .ticket::before, .ticket::after { content: ''; position: absolute; left: 0; right: 0; height: 8px; background: radial-gradient(circle at 5px 0, transparent 4px, #fff 4.5px) 0 0 / 10px 8px repeat-x; }
 .ticket::before { top: -7px; transform: rotate(180deg); }
 .ticket::after { bottom: -7px; }
@@ -156,7 +156,7 @@ textarea { min-height: 110px; resize: vertical; }
 .charta li:last-child { border-bottom: 0; }
 
 /* ---------- Brățara pacientului ---------- */
-.band { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto 26px; align-items: stretch; margin: 6px 0 22px; filter: drop-shadow(0 6px 12px rgba(23,47,75,.12)); }
+.band { display: grid; grid-template-columns: 26px minmax(0, 1fr) auto 26px; align-items: stretch; margin: 6px 0 22px; filter: drop-shadow(0 6px 12px rgba(20,48,140,.12)); }
 .band .end { background: var(--sign-soft); border: 2px solid #b9d8d3; }
 .band .end.l { border-radius: 14px 0 0 14px; border-right: 0; }
 .band .end.r { border-radius: 0 14px 14px 0; border-left: 0; background: var(--sign-soft) radial-gradient(circle at 50% 50%, #fff 0 4px, #9cc6bf 4.5px 6px, transparent 6.5px); }
@@ -484,7 +484,7 @@ details.fallback summary { cursor: pointer; font-weight: 700; color: var(--sign)
 [hidden] { display: none !important; }
 
 /* ASE: legitimația de student */
-.idcard { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 6px 0 22px; box-shadow: 0 8px 18px rgba(23,47,75,.10); max-width: 640px; }
+.idcard { background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; margin: 6px 0 22px; box-shadow: 0 8px 18px rgba(20,48,140,.10); max-width: 640px; }
 .idcard .idtop { background: var(--sign); color: #fff; padding: 10px 18px; font: 700 1rem/1.2 var(--head); letter-spacing: .02em; display: flex; justify-content: space-between; gap: 12px; }
 .idcard .idtop span { font: 400 .8rem/1.4 var(--body); opacity: .85; }
 .idcard .idbody { display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 16px 18px; }
@@ -511,3 +511,20 @@ details.fallback summary { cursor: pointer; font-weight: 700; color: var(--sign)
   .brand b { font-size: 1.08rem; white-space: nowrap; }
   .timer { padding: 6px 10px; }
 }
+
+/* Culori vii: albastru spre indigo pe suprafețele mari */
+:root { --grad: linear-gradient(120deg, #1f5bd8 0%, #3846c9 55%, #5a3dc8 100%); }
+.topbar { background: var(--grad); box-shadow: 0 3px 0 var(--wait); }
+.cover, .hero, .cc-lesson { background: var(--grad); }
+.idcard .idtop { background: var(--grad); }
+.btn.primary { background: var(--sign); box-shadow: 0 4px 12px rgba(31,91,216,.28); }
+.btn.go { box-shadow: 0 4px 12px rgba(255,176,32,.35); }
+.card.signed { position: relative; border-top: 1px solid var(--line); padding-top: calc(clamp(18px, 3vw, 32px) + 5px); overflow: hidden; }
+.card.signed::before { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 6px; background: var(--grad); }
+.kpi::before { background: var(--grad); }
+.howto li::before, .prop h3 .num, .sendsteps li::before { background: var(--grad); }
+.rail li.done::before { background: var(--sign); border-color: var(--sign); }
+.chips li { background: var(--sign-soft); }
+.scale input:checked + span, .rating input:checked + span { background: var(--grad); border-color: transparent; }
+
+.cover h1 { font-size: clamp(1.9rem, 3.6vw, 2.5rem); line-height: 1.06; }
