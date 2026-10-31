@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Zona profesorului</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="profesor.html" aria-label="Zona profesorului">
+    <svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="6" fill="#fff"/><path d="M20 9 5 16l15 7 15-7z" fill="#24456b"/><path d="M11 19v7c0 2.5 4 4.5 9 4.5s9-2 9-4.5v-7l-9 4.2z" fill="#24456b"/><path d="M33 17v8" stroke="#e8a317" stroke-width="2.4" stroke-linecap="round"/><circle cx="33" cy="26.5" r="2" fill="#e8a317"/></svg>
+    <div><b>Zona profesorului</b><span>SERVQUAL la ASE, rezultatele grupelor</span></div>
+  </a>
+  <div class="sp"></div>
+  <a class="btn small" href="./" style="background:#fff">Aplicația studentului</a>
+</header>
+
+<div class="twrap">
+  <section class="card signed noprint" id="connect">
+    <div class="mini connect-mini"><span id="loadedmsg"></span>
+      <span class="livebar" id="livebar" hidden><button class="btn small primary" id="btn-refresh">Actualizează</button><label><input type="checkbox" id="auto"> automat la 30 de secunde</label></span>
+      <button class="btn small" id="btn-change">Schimbă sau adaugă date</button></div>
+    <div class="full">
+    <h2>Încarcă răspunsurile</h2>
+    <div class="livepanel" id="livepanel" hidden><h3>Rezultatele trimise de studenți</h3>
+      <p class="small" style="margin:0 0 12px">Se citesc direct din foaia ta Google Sheets. Cheia se introduce o singură dată pe acest calculator.</p></div>
+    <div class="grid2">
+      <div>
+        <h3 id="codes-title">Lipește codurile studenților</h3>
+        <label class="f">Copiază coloana cu coduri din foaia Google Sheets a formularului și lipește-o aici
+          <span class="h">Poți lipi și cu alt text în jur (date, nume, coloane întregi): aplicația găsește singură codurile.</span>
+          <textarea id="codes" rows="6" placeholder="CAL1.MHxQb3Blc2N1…" spellcheck="false"></textarea></label>
+        <button class="btn primary" id="btn-codes">Afișează rezultatele</button>
+      </div>
+      <div>
+        <h3>Alte surse</h3>
+        <div class="drop" id="drop"><p style="margin:0 0 10px">Fișiere <b>.json</b> descărcate de studenți: trage-le aici sau alege-le din calculator.</p>
+          <input type="file" id="files" accept=".json,application/json" multiple></div>
+        <p style="margin:14px 0 0"><button class="btn" id="btn-demo">Încarcă date demonstrative (48 de studenți)</button></p>
+        <details style="margin-top:16px" id="advanced"><summary style="cursor:pointer;font-weight:700;color:var(--sign)">Avansat: colector Google Apps Script</summary>
+        <div style="margin-top:12px" id="sheetbox">
+        <label class="f" id="eplabel">Adresa colectorului (se termină în /exec)
+          <input type="text" id="endpoint" placeholder="https://script.google.com/macros/s/…/exec" autocomplete="off"></label>
+        <div class="row"><label class="f">Cheia profesorului <span class="h">Cea afișată de funcția setup din script (TEACHER_KEY)</span>
+          <input type="text" id="tkey" autocomplete="off" style="-webkit-text-security:disc"></label>
+        <button class="btn primary" id="btn-load">Încarcă rezultatele</button></div></div></details>
+      </div>
+    </div>
+    </div>
+    <p class="status" id="status" role="status"></p>
+  </section>
+
+  <div id="dash"></div>
+</div>
+
+<script src="config.js"></script>
+<script src="content.js"></script>
+<script src="core.js"></script>
+<script src="demo.js"></script>
+<script src="teacher.js"></script>
+</body>
+</html>
